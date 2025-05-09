@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="Image/My Logo.png" type="png">
 </head>
 <body>
     <header>
+        <div class="scroller"></div>
         <div class="container">
             <div class="logo">
                 <a href=""><img loading="lazy" src="Image/My Logo.png" alt=""></a>
@@ -25,8 +23,14 @@
                 <a href="#service">Service</a>
                 <a href="#project">Project</a>
                 <a href="#contact">Contact</a>
+            </nav>
+            <div class="dark">
+                <input type="checkbox" class="toggleButtom" id="toggleButtom">
+                <label class="toggleButtom-label" for="toggleButtom" >
+                    <span class="ball"></span>
+                </label>
             </div>
-        </nav>
+        </div>
     </header>
     <!-- landing -->
     <section id="home" class="landing">
@@ -72,6 +76,42 @@
         </div>
     </section>
     <!-- about-me -->
+    
+    <!-- language -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2 class="header-text">Language</h2>
+            <div class="box-progress">
+            <div class="progress">
+                <h4 class="language-name">HTML</h4>
+                <span class="percentage">90%</span>
+            </div>
+            <div class="aaa"></div>
+            </div>
+            <div class="box-progress">
+            <div class="progress">
+                <h4 class="language-name">CSS</h4>
+                <span class="percentage">88%</span>
+            </div>
+            <div class="aaa"></div>
+            </div>
+            <div class="box-progress">
+            <div class="progress">
+                <h4 class="language-name">JavaScrept</h4>
+                <span class="percentage">83%</span>
+            </div>
+            <div class="aaa"></div>
+            </div>
+            <div class="box-progress">
+            <div class="progress">
+                <h4 class="language-name">Bootstrap</h4>
+                <span class="percentage">75%</span>
+            </div>
+            <div class="aaa"></div>
+            </div>
+        </div>
+    </section>
+    <!-- language -->
 
     <!--Service -->
     <section id="service" class="service">
@@ -192,7 +232,7 @@
     </section>
     <!--Contact -->
     <footer style="background-color: #f6f6f6; text-align: center; padding: 10px;color:#54836c;font-size: 0.8rem;">
-        &COPY;2025 Designed And Devloped by <a href="https://wa.me/773931319" style="text-decoration: none; color: #54836c;">Saeed Baaidhan</a>.
+        &COPY;<span class="year">year</span> Designed And Devloped by <a href="https://wa.me/773931319" style="text-decoration: none; color: #54836c;">Saeed Baaidhan</a>.
     </footer>
 
     <script src="JavaScript/main.js"></script>

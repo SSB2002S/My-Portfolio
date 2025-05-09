@@ -25,7 +25,46 @@ body {
   background-color: #282a36;
   color: var(--mainColor);
   font-family: "Work Sans", serif;
+  height: fit-content;
 }
+
+body.darkMode{
+  background-color:#fffffff4;
+}
+
+body.darkMode .toggleButtom-label{
+  background-color: var(--cardColor)
+}
+body.darkMode .toggleButtom-label .ball{
+  background-color: var(--secondaryColor)
+}
+
+body.darkMode .landing .container .text h3{
+  color: var(--mainColor);
+}
+
+body.darkMode .icon-content p{
+  color: var(--mainColor);
+}
+body.darkMode  .contact .container .content .information .social-media  .icon-content p a{
+  color: var(--mainColor);
+}
+
+body.darkMode .main-input{
+  background-color:rgb(223, 242, 232);
+  color: none;
+}
+body.darkMode .main-input::placeholder{
+  color: var(--mainColor)
+}
+
+body.darkMode .container .content #message .mess-cont [type=submit]{
+  background-color: var(--mainColor);
+}
+body.darkMode .landing .container .text .social-media a i:hover{
+  color: var(--linkFontColor)
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -60,6 +99,21 @@ html {
 }
 
 /* Strat Header */
+.scroller{
+  z-index: 2;
+  width: 0px;
+  height: 3px;
+  background-color: var(--secondaryColor);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media (max-width:1199px) {
+  .scroller{
+    display: none;
+  }
+}
+
 header {
   padding: 32px 0;
 }
@@ -136,6 +190,40 @@ header .container nav a:hover {
   color: varvar(--linkFontColor);
   padding: 2px 4px;
   border-radius: 10px;
+}
+
+.toggleButtom{
+  position: absolute;
+  display: none;
+}
+.toggleButtom-label{
+  background-color: var(--secondaryColor);
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggleButtom-label .ball{
+  background-color: var(--cardColor);
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: 0.2s linear;
+}
+
+
+
+.toggleButtom:checked + .toggleButtom-label .ball{
+  transform: translateX(24px);
 }
 
 /* @media (max-width: 767px) {
@@ -287,11 +375,9 @@ header .container nav a:hover {
   box-shadow: 0px 0px 8px 0px var(--mainColor);
 }
 
+
 .landing .container .image {
   width: 100%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   position: relative;
 }
 
@@ -366,7 +452,9 @@ margin-top: 5%;
 } */
 
 
-
+  .about-me {
+    margin-bottom: var(--section-margin);
+  }
 @media (max-width:550px){
   .about-me {
     margin-top: -15rem;
@@ -507,6 +595,60 @@ margin-top: 5%;
 
 /* End About Me  */
 
+/* Start tools  */
+  .tools {
+    margin-top: var(--section-margin);
+  }
+
+@media (max-width:550px){
+  .tools {
+    margin-top: 0rem;
+  }
+}
+@media (min-width: 768px) {
+  .tools {
+    margin-top: 0;
+  }
+}
+
+
+
+.tools .container h2::before {
+  content: "Language";
+  position: absolute;
+  font-size: 80px;
+  color: #54836c18;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .tools .container h2::before {
+    font-size: 3rem;
+  }
+}
+
+
+.tools .container .box-progress .progress{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px;
+}
+.tools .container .box-progress  .aaa{
+  width: 100%;
+  height: 16px;
+  background-color: var(--linkFontColor);
+  border-radius: 0 3px 3px 0;
+  position: relative;
+  margin: 32px 0;
+}
+
+/* End About Me  */
+
 /* Strart Service  */
 .service {
   margin: var(--section-margin) 0;
@@ -537,6 +679,8 @@ margin-top: 5%;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   justify-content: center;
+    overflow: hidden;
+
 
 }
 .service .container .content .srv {
@@ -547,6 +691,7 @@ margin-top: 5%;
   overflow: hidden;
   justify-self: center;
   position: relative;
+
 }
 
 @media (max-width : 767px) {
@@ -561,11 +706,15 @@ margin-top: 5%;
   border-radius: 7px;
   transition: 0.3s;
   width: 100%;
+  transition-duration: 0.3s;
+  transition-timing-function:ease-in-out ;
+  
+}
+.service .container .content .srv:hover img{
+  box-shadow: 0 0 0 500px var(--secondaryColor);
+
 }
 
-.service .container .content .srv img:hover {
-  transform: scale(1.05);
-}
 
 .service .container .content .srv .desc {
   display: flex;
@@ -580,6 +729,7 @@ margin-top: 5%;
   margin-bottom: 16px;
   font-size: 22px;
   font-weight: 600;
+
 }
 .service .container .content .srv .desc p {
   margin-bottom: 16px;
@@ -604,8 +754,16 @@ margin-top: 5%;
   transform: translateX(-50%);
 }
 
+
+.service .container .content .srv:hover a{
+  background-color: var(--linkFontColor);
+  color: var(--secondaryColor);
+}
+
+
 .service .container .content .srv a:hover {
-  background-color: transparent;
+  background-color: var(--secondaryColor);
+  color: var(--linkFontColor);
   border: 1px solid var(--mainColor);
   box-shadow: 0px 0px 8px 0px var(--mainColor);
 }

@@ -20,22 +20,12 @@ up.onclick = function () {
 };
 
 
-// حساب نسبة التمرير
-// let el = document.querySelector(".scroller")
-// // console.log(scroller)
-// let hight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-// window.addEventListener("scroll", () => {
-//     let scrollTop = document.documentElement.scrollTop;
-//     el.style.width = `${(scrollTop / hight) * 100}% `
-// })
-
 let scrollElement = document.querySelector(".scroller")
 let hieght = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 window.addEventListener("scroll",()=>{
     let scrollTop = document.documentElement.scrollTop;
     scrollElement.style.width = `${(scrollTop / hieght)*100}%`;
 });
-
 
 
 //DarkMode & LightMode
@@ -51,8 +41,14 @@ let yearSpan = document.querySelector(".year");
 yearSpan.innerHTML = year.getFullYear();
 
 
-let ss = document.querySelectorAll(".tools .container .box-progress .progress .percentage")
-let progress = document.querySelectorAll(".tools .container .box-progress .aaa")
-for(let i = 0; i< progress.length;i++){
-    progress[i].style.width = ss[i].innerHTML
+let progressSectiom = document.getElementById("tools")
+let boxline = document.querySelectorAll(".box-line .line")
+console.log(boxline)
+window.onscroll = function(){
+    if(scrollY >= progressSectiom.offsetTop - 250){
+        boxline.forEach(line => {
+            line.style.width = line.dataset.prog
+        });
+    }
 }
+

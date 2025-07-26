@@ -43,7 +43,6 @@ yearSpan.innerHTML = year.getFullYear();
 
 let progressSectiom = document.getElementById("tools")
 let boxline = document.querySelectorAll(".box-line .line")
-console.log(boxline)
 window.onscroll = function(){
     if(scrollY >= progressSectiom.offsetTop - 250){
         boxline.forEach(line => {

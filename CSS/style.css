@@ -28,41 +28,49 @@ body {
   height: fit-content;
 }
 
-body.darkMode{
-  background-color:#fffffff4;
+body.darkMode {
+  background-color: #fffffff4;
 }
 
-body.darkMode .toggleButtom-label{
-  background-color: var(--cardColor)
+body.darkMode .toggleButtom-label {
+  background-color: var(--cardColor);
 }
-body.darkMode .toggleButtom-label .ball{
-  background-color: var(--secondaryColor)
+body.darkMode .toggleButtom-label .ball {
+  background-color: var(--secondaryColor);
 }
 
-body.darkMode .landing .container .text h3{
+body.darkMode .landing .container .text h3 {
   color: var(--mainColor);
 }
 
-body.darkMode .icon-content p{
+body.darkMode .icon-content p {
   color: var(--mainColor);
 }
-body.darkMode  .contact .container .content .information .social-media  .icon-content p a{
+body.darkMode
+  .contact
+  .container
+  .content
+  .information
+  .social-media
+  .icon-content
+  p
+  a {
   color: var(--mainColor);
 }
 
-body.darkMode .main-input{
-  background-color:rgb(223, 242, 232);
+body.darkMode .main-input {
+  background-color: rgb(223, 242, 232);
   color: none;
 }
-body.darkMode .main-input::placeholder{
-  color: var(--mainColor)
+body.darkMode .main-input::placeholder {
+  color: var(--mainColor);
 }
 
-body.darkMode .container .content #message .mess-cont [type=submit]{
+body.darkMode .container .content #message .mess-cont [type="submit"] {
   background-color: var(--mainColor);
 }
-body.darkMode .landing .container .text .social-media a i:hover{
-  color: var(--linkFontColor)
+body.darkMode .landing .container .text .social-media a i:hover {
+  color: var(--linkFontColor);
 }
 
 html {
@@ -99,7 +107,7 @@ html {
 }
 
 /* Strat Header */
-.scroller{
+.scroller {
   z-index: 2;
   width: 0px;
   height: 3px;
@@ -108,8 +116,8 @@ html {
   top: 0;
   left: 0;
 }
-@media (max-width:1199px) {
-  .scroller{
+@media (max-width: 1199px) {
+  .scroller {
     display: none;
   }
 }
@@ -192,11 +200,11 @@ header .container nav a:hover {
   border-radius: 10px;
 }
 
-.toggleButtom{
+.toggleButtom {
   position: absolute;
   display: none;
 }
-.toggleButtom-label{
+.toggleButtom-label {
   background-color: var(--secondaryColor);
   width: 50px;
   height: 26px;
@@ -209,7 +217,7 @@ header .container nav a:hover {
   align-items: center;
 }
 
-.toggleButtom-label .ball{
+.toggleButtom-label .ball {
   background-color: var(--cardColor);
   width: 22px;
   height: 22px;
@@ -220,9 +228,7 @@ header .container nav a:hover {
   transition: 0.2s linear;
 }
 
-
-
-.toggleButtom:checked + .toggleButtom-label .ball{
+.toggleButtom:checked + .toggleButtom-label .ball {
   transform: translateX(24px);
 }
 
@@ -238,7 +244,7 @@ header .container nav a:hover {
   overflow: hidden;
   /* background-color: #202128; */
 }
-@media (min-width:550px) and (max-width: 767px) {
+@media (min-width: 550px) and (max-width: 767px) {
   .landing {
     margin-bottom: 240px;
   }
@@ -264,24 +270,25 @@ header .container nav a:hover {
     flex-direction: column;
     margin-top: 1rem;
     top: 30%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
-@media (min-width: 371px) and (max-width:550px){
+@media (min-width: 371px) and (max-width: 550px) {
   .landing .container {
     width: 100%;
     height: fit-content;
     flex-direction: column;
     top: 30%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
-@media (min-width: 550px) and (max-width:767px){
-  .landing .container .image .im{
+@media (min-width: 550px) and (max-width: 767px) {
+  .landing .container .image .im {
     display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 60%;}
+    justify-content: center;
+    align-items: center;
+    margin-top: 60%;
+  }
 }
 .landing .container .text {
   width: 100%;
@@ -309,12 +316,12 @@ header .container nav a:hover {
 }
 
 @media (max-width: 768px) {
-  .landing .container .text h2{
+  .landing .container .text h2 {
     animation: none;
   }
 }
 @media (min-width: 768px) {
-  .landing .container .text h2{
+  .landing .container .text h2 {
     text-wrap: nowrap;
   }
 }
@@ -342,17 +349,14 @@ header .container nav a:hover {
 
 @media (max-width: 767px) {
   .landing .container .text .social-media {
-      justify-content: space-around;
-      align-items: center;
-      margin-left: 12px;
-    }
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 12px;
+  }
 }
 .landing .container .text .social-media a i {
   transition: 0.3s;
 }
-
-
-
 
 .landing .container .text .social-media a i:hover {
   transform: scale(1.1);
@@ -375,28 +379,25 @@ header .container nav a:hover {
   box-shadow: 0px 0px 8px 0px var(--mainColor);
 }
 
-
 .landing .container .image {
   width: 100%;
   position: relative;
 }
-
 
 .landing .container .image img {
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   transition: 0.5s;
 }
 
-.myPhoto{
-
+.myPhoto {
   animation-name: image;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-timing-function:ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes image {
@@ -404,27 +405,26 @@ header .container nav a:hover {
     margin-top: 0;
   }
   50% {
-margin-top: 5%;  
-}
+    margin-top: 5%;
+  }
   100% {
     margin-top: 0;
   }
 }
 
 @media (max-width: 767px) {
-  .landing .container .image{
+  .landing .container .image {
     display: none;
   }
-  }
+}
 
 @media (min-width: 992px) {
-  .landing .container .image{
+  .landing .container .image {
     width: 40rem;
   }
-  }
+}
 
-
-.landing #up{
+.landing #up {
   background-color: var(--mainColor);
   color: var(--section-background);
   border: none;
@@ -439,7 +439,7 @@ margin-top: 5%;
   display: none;
   z-index: 1;
 }
-.landing #up:hover{
+.landing #up:hover {
   background-color: var(--linkFontColor);
 }
 
@@ -451,11 +451,10 @@ margin-top: 5%;
     
 } */
 
-
-  .about-me {
-    margin-bottom: var(--section-margin);
-  }
-@media (max-width:550px){
+.about-me {
+  margin-bottom: var(--section-margin);
+}
+@media (max-width: 550px) {
   .about-me {
     margin-top: -15rem;
   }
@@ -465,8 +464,6 @@ margin-top: 5%;
     margin-top: 0;
   }
 }
-
-
 
 .about-me .container h2::before {
   content: "About Me";
@@ -488,9 +485,9 @@ margin-top: 5%;
 .about-me .container .content {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   flex-direction: row-reverse;
   gap: 0px 30px;
+  text-align: justify;
 }
 
 @media (max-width: 767px) {
@@ -500,7 +497,7 @@ margin-top: 5%;
   }
 }
 
-.about-me .container .content .text{
+.about-me .container .content .text {
   width: 100%;
 }
 .about-me .container .content .text h3 {
@@ -511,7 +508,7 @@ margin-top: 5%;
 }
 
 @media (max-width: 767px) {
-  .about-me .container .content .text h3{
+  .about-me .container .content .text h3 {
     font-size: 1.5rem;
   }
 }
@@ -528,7 +525,6 @@ margin-top: 5%;
     transform: translate(-50%);
   }
 }
-
 
 @media (max-width: 767px) {
   .about-me .container .content .text h3::before {
@@ -596,11 +592,11 @@ margin-top: 5%;
 /* End About Me  */
 
 /* Start tools  */
-  .tools {
-    margin-top: var(--section-margin);
-  }
+.tools {
+  margin-top: var(--section-margin);
+}
 
-@media (max-width:550px){
+@media (max-width: 550px) {
   .tools {
     margin-top: 0rem;
   }
@@ -611,10 +607,8 @@ margin-top: 5%;
   }
 }
 
-
-
 .tools .container h2::before {
-  content: "Language";
+  content: "Language & Tools";
   position: absolute;
   font-size: 80px;
   color: #54836c18;
@@ -630,22 +624,21 @@ margin-top: 5%;
   }
 }
 
-
-.tools .container .box-progress .progress{
+.tools .container .box-progress .progress {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0px;
 }
-.tools .container .box-progress .box-line{
+.tools .container .box-progress .box-line {
   position: relative;
   width: 100%;
   height: 24px;
   background-color: var(--section-background);
-  margin: 32px 0;
+  margin: 24px 0;
 }
-.tools .container .box-progress .box-line .line{
+.tools .container .box-progress .box-line .line {
   position: absolute;
   height: 100%;
   top: 0;
@@ -686,9 +679,7 @@ margin-top: 5%;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   justify-content: center;
-    overflow: hidden;
-
-
+  overflow: hidden;
 }
 .service .container .content .srv {
   /* width: 300px; */
@@ -698,15 +689,13 @@ margin-top: 5%;
   overflow: hidden;
   justify-self: center;
   position: relative;
-
 }
 
-@media (max-width : 767px) {
+@media (max-width: 767px) {
   .service .container .content .srv {
     width: 80%;
   }
 }
-
 
 .service .container .content .srv img {
   background-color: var(--secondaryColor);
@@ -714,14 +703,11 @@ margin-top: 5%;
   transition: 0.3s;
   width: 100%;
   transition-duration: 0.3s;
-  transition-timing-function:ease-in-out ;
-  
+  transition-timing-function: ease-in-out;
 }
-.service .container .content .srv:hover img{
+.service .container .content .srv:hover img {
   box-shadow: 0 0 0 500px var(--secondaryColor);
-
 }
-
 
 .service .container .content .srv .desc {
   display: flex;
@@ -730,23 +716,22 @@ margin-top: 5%;
   margin: 32px 0;
   line-height: 1.3;
   padding: 0 8px;
-
 }
 .service .container .content .srv .desc h3 {
   margin-bottom: 16px;
   font-size: 22px;
   font-weight: 600;
-
 }
 .service .container .content .srv .desc p {
   margin-bottom: 16px;
   width: 90%;
   align-self: center;
+  text-align: justify;
 }
 
 .service .container .content .srv a {
   /* align-self: flex-end; */
-  margin:8px 0;
+  margin: 8px 0;
   text-decoration: none;
   background-color: var(--secondaryColor);
   color: var(--linkFontColor);
@@ -761,12 +746,10 @@ margin-top: 5%;
   transform: translateX(-50%);
 }
 
-
-.service .container .content .srv:hover a{
+.service .container .content .srv:hover a {
   background-color: var(--linkFontColor);
   color: var(--secondaryColor);
 }
-
 
 .service .container .content .srv a:hover {
   background-color: var(--secondaryColor);
@@ -775,7 +758,6 @@ margin-top: 5%;
   box-shadow: 0px 0px 8px 0px var(--mainColor);
 }
 /* End Service  */
-
 
 /*Start Project*/
 
@@ -800,81 +782,70 @@ margin-top: 5%;
   }
 }
 
-.projects .container .all-projects{
+.projects .container .all-projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap:   30px;
+  gap: 30px;
   justify-content: center;
-  
-
 }
-.projects .container .all-projects .project{
+.projects .container .all-projects .project {
   background-color: var(--cardColor);
   border-radius: 5px;
   transition: 0.2s;
   justify-self: center;
   position: relative;
   padding-bottom: 32px;
-
-
 }
 .projects .container .all-projects .project:hover {
-  box-shadow: 0px 0px 20px -15px var(--section-background) ;
-
+  box-shadow: 0px 0px 20px -15px var(--section-background);
 }
 
-@media (max-width : 767px) {
+@media (max-width: 767px) {
   .projects .container .all-projects .project {
     width: 80%;
   }
 }
 
-
 .projects .container .all-projects .project .image {
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   transition: 0.3s;
-
 }
 .projects .container .all-projects .project .image:hover {
   overflow: visible;
   transform: scale(1.05);
-
 }
 
-.projects .container .all-projects .project .image img{
+.projects .container .all-projects .project .image img {
   width: 100%;
   transition: 0.3s;
   border-radius: 5px;
-
 }
 
-
-
-.projects .container .all-projects .project .content{
+.projects .container .all-projects .project .content {
   margin: 16px 0;
   padding: 0 8px;
   text-align: center;
   line-height: 1.3;
 }
 
-@media (max-width : 767px) {
+@media (max-width: 767px) {
   .projects .container .all-projects .project .content {
     width: 100%;
   }
 }
-.projects .container .all-projects .project .content h4{
+.projects .container .all-projects .project .content h4 {
   font-size: 18px;
   margin-bottom: 18px;
 }
 
-.projects .container .all-projects .project .content p{
+.projects .container .all-projects .project .content p {
   margin-bottom: 18px;
   font-size: 16px;
+  text-align: justify;
 }
 
-
-.projects .container .all-projects .project  a{
+.projects .container .all-projects .project a {
   display: flex;
   justify-self: end;
   text-decoration: none;
@@ -893,9 +864,9 @@ margin-top: 5%;
   animation-timing-function: ease-in-out;
 }
 
-.projects .container .all-projects .project a:hover{
+.projects .container .all-projects .project a:hover {
   color: var(--secondaryColor);
-  background-color: var(--linkFontColor)
+  background-color: var(--linkFontColor);
 }
 
 @keyframes left {
@@ -910,25 +881,23 @@ margin-top: 5%;
   }
 }
 
-@media (max-width : 767px) {
-  .projects .container .all-projects .project .content  a {
+@media (max-width: 767px) {
+  .projects .container .all-projects .project .content a {
     position: relative;
     right: 16px;
     margin-bottom: 16px;
-
   }
 }
 
 /*End Project*/
 
 /*Start Contact*/
-.contact{
-  margin:  var(--section-margin) 0;
+.contact {
+  margin: var(--section-margin) 0;
 }
 @media (max-width: 767px) {
   .contact {
     margin: 0;
-
   }
 }
 .contact .container .header-text::before {
@@ -947,124 +916,122 @@ margin-top: 5%;
   }
 }
 
-.contact .container .content{
+.contact .container .content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 20px;
 }
 
 @media (max-width: 768px) {
-  .contact .container .content{
+  .contact .container .content {
     display: block;
-    
   }
 }
-@media (min-width: 768px) and (max-width:992px) {
-  .contact .container .content{
+@media (min-width: 768px) and (max-width: 992px) {
+  .contact .container .content {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
-@media (min-width: 993px) and (max-width:1200px) {
-  .contact .container .content{
+@media (min-width: 993px) and (max-width: 1200px) {
+  .contact .container .content {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-
   }
 }
 
-.contact .container .content .information{
+.contact .container .content .information {
   display: grid;
   align-content: space-between;
 }
 
-.contact .container .content .information h3{
+.contact .container .content .information h3 {
   margin-bottom: 16px;
-  
 }
-.contact .container .content .information h4{
+.contact .container .content .information h4 {
   margin-bottom: 8px;
   font-weight: 600;
   font-size: 32px;
-  
 }
 
-@media (max-width: 768px){
-  .contact .container .content .information h3{
+@media (max-width: 768px) {
+  .contact .container .content .information h3 {
     display: none;
   }
-  .contact .container .content .information h4{
+  .contact .container .content .information h4 {
     text-align: center;
   }
-  .contact .container .content .information .Lorem{
+  .contact .container .content .information .Lorem {
     text-align: center;
     margin-top: 16px;
   }
 }
 
-.contact .container .content .information .Lorem{
+.contact .container .content .information .Lorem {
   margin-bottom: 32px;
-  text-wrap-style: balance
-  ;}
-.contact .container .content .information .social-media .call{
+  text-wrap-style: balance;
+}
+.contact .container .content .information .social-media .call {
   display: flex;
   gap: 64px 8px;
 }
-.contact .container .content .information .social-media .call .icon{
+.contact .container .content .information .social-media .call .icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
 }
-.contact .container .content .information .social-media .call .icon a{
+.contact .container .content .information .social-media .call .icon a {
   color: var(--linkFontColor);
 }
-.contact .container .content .information .social-media .call .icon-content{
+.contact .container .content .information .social-media .call .icon-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
   color: var(--secondaryColor);
-
 }
-.contact .container .content .information .social-media .call .icon-content a{
+.contact .container .content .information .social-media .call .icon-content a {
   text-decoration: none;
   color: var(--secondaryColor);
   transition: 0.3s;
 }
-.contact .container .content .information .social-media .call .icon-content a:hover{
+.contact
+  .container
+  .content
+  .information
+  .social-media
+  .call
+  .icon-content
+  a:hover {
   color: var(--linkFontColor);
 }
 
-.contact .container .content #message{
+.contact .container .content #message {
   position: relative;
 }
 
-@media (max-width : 767px) {
-  .contact .container .content #message{ 
+@media (max-width: 767px) {
+  .contact .container .content #message {
     margin: 32px 0;
-
   }
 }
 
-.contact .container .content #message h3{ 
+.contact .container .content #message h3 {
   margin-bottom: 8px;
   overflow: hidden;
 }
-@media (max-width : 768px) {
-  .contact .container .content #message h3 { 
+@media (max-width: 768px) {
+  .contact .container .content #message h3 {
     margin-top: 32px;
-
   }
 }
-.contact .container .content #message .mess-cont{ 
+.contact .container .content #message .mess-cont {
   display: flex;
   flex-direction: column;
-  
 }
 
-
-.contact .container .content #message .mess-cont label{ 
+.contact .container .content #message .mess-cont label {
   margin: 16px 0 8px;
 }
-.contact .container .content #message .mess-cont .main-input{ 
+.contact .container .content #message .mess-cont .main-input {
   height: 28px;
   border-radius: 2px;
   border: none;
@@ -1075,18 +1042,18 @@ margin-top: 5%;
   }
 } */
 
-.contact .container .content #message .mess-cont .main-input::placeholder{ 
+.contact .container .content #message .mess-cont .main-input::placeholder {
   font-size: 14px;
 }
-.contact .container .content #message .mess-cont .ms{ 
+.contact .container .content #message .mess-cont .ms {
   height: 72px;
   resize: none;
 }
-.contact .container .content #message .mess-cont .main-input:focus{ 
+.contact .container .content #message .mess-cont .main-input:focus {
   outline: none;
 }
 
-.contact .container .content #message .mess-cont .sub{ 
+.contact .container .content #message .mess-cont .sub {
   margin-top: 16px;
   width: 20%;
   background-color: var(--linkFontColor);
@@ -1098,10 +1065,10 @@ margin-top: 5%;
   transition: 0.3s;
 }
 
-.contact .container .content #message .mess-cont .sub:hover{
+.contact .container .content #message .mess-cont .sub:hover {
   background-color: transparent;
   border: 1px solid var(--linkFontColor);
-  color: var(--linkFontColor)
-};
+  color: var(--linkFontColor);
+}
 
 /*End Contact*/
